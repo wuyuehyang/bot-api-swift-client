@@ -8,12 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		7B29047821F5D19B00556488 /* MixinSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B29047621F5D19B00556488 /* MixinSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B38C21121F709500068F47F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B38C21021F709500068F47F /* Network.swift */; };
+		7B7F8CAC21F816D200AAD11E /* MixinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7F8CAB21F816D200AAD11E /* MixinError.swift */; };
+		7BC58B1921F842BA00E5CA4F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC58B1821F842BA00E5CA4F /* Result.swift */; };
+		7BE75AAB21F85BD3000CA2A1 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AAA21F85BD3000CA2A1 /* JWT.swift */; };
+		7BE75AAD21F86136000CA2A1 /* RSAKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */; };
+		7BE75AB121F86B2F000CA2A1 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AB021F86B2F000CA2A1 /* Credential.swift */; };
+		7BE75AB521F871FC000CA2A1 /* String+SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AB421F871FC000CA2A1 /* String+SHA256.swift */; };
+		7BE75ABA21F88C33000CA2A1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AB921F88C33000CA2A1 /* Request.swift */; };
+		7BE75ABC21F8A19C000CA2A1 /* Data+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75ABB21F8A19C000CA2A1 /* Data+Base64.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B29047321F5D19B00556488 /* MixinSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MixinSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B29047621F5D19B00556488 /* MixinSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixinSDK.h; sourceTree = "<group>"; };
 		7B29047721F5D19B00556488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B38C21021F709500068F47F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		7B7F8CAB21F816D200AAD11E /* MixinError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixinError.swift; sourceTree = "<group>"; };
+		7BC58B1821F842BA00E5CA4F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7BE75AAA21F85BD3000CA2A1 /* JWT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
+		7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAKeyPair.swift; sourceTree = "<group>"; };
+		7BE75AB021F86B2F000CA2A1 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		7BE75AB421F871FC000CA2A1 /* String+SHA256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SHA256.swift"; sourceTree = "<group>"; };
+		7BE75AB921F88C33000CA2A1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		7BE75ABB21F8A19C000CA2A1 /* Data+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Base64.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +64,43 @@
 		7B29047521F5D19B00556488 /* MixinSDK */ = {
 			isa = PBXGroup;
 			children = (
+				7B38C21D21F73AEC0068F47F /* Crypto */,
+				7B38C20F21F709410068F47F /* Network */,
+				7B38C20921F707880068F47F /* Model */,
+				7B7F8CAB21F816D200AAD11E /* MixinError.swift */,
 				7B29047621F5D19B00556488 /* MixinSDK.h */,
 				7B29047721F5D19B00556488 /* Info.plist */,
 			);
 			path = MixinSDK;
+			sourceTree = "<group>";
+		};
+		7B38C20921F707880068F47F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7BC58B1821F842BA00E5CA4F /* Result.swift */,
+				7BE75AB021F86B2F000CA2A1 /* Credential.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B38C20F21F709410068F47F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7BE75AAA21F85BD3000CA2A1 /* JWT.swift */,
+				7BE75AB921F88C33000CA2A1 /* Request.swift */,
+				7B38C21021F709500068F47F /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7B38C21D21F73AEC0068F47F /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */,
+				7BE75AB421F871FC000CA2A1 /* String+SHA256.swift */,
+				7BE75ABB21F8A19C000CA2A1 /* Data+Base64.swift */,
+			);
+			path = Crypto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC58B1921F842BA00E5CA4F /* Result.swift in Sources */,
+				7BE75AB521F871FC000CA2A1 /* String+SHA256.swift in Sources */,
+				7BE75ABC21F8A19C000CA2A1 /* Data+Base64.swift in Sources */,
+				7BE75AAB21F85BD3000CA2A1 /* JWT.swift in Sources */,
+				7BE75ABA21F88C33000CA2A1 /* Request.swift in Sources */,
+				7B7F8CAC21F816D200AAD11E /* MixinError.swift in Sources */,
+				7B38C21121F709500068F47F /* Network.swift in Sources */,
+				7BE75AAD21F86136000CA2A1 /* RSAKeyPair.swift in Sources */,
+				7BE75AB121F86B2F000CA2A1 /* Credential.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
