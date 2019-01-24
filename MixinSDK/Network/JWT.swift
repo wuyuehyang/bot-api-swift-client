@@ -34,6 +34,9 @@ struct JWT {
     private static let base64EncodedHeader = header.data(using: .utf8)!.base64URLEncodedString()
     
     static func signedToken(claims: JWTClaims, privateKey: SecKey) throws -> String {
+        guard SecKeyIsAlgorithmSupported(privateKey, .sign, .rsaSignatureMessagePKCS1v15SHA512) else {
+            throw MixinError.jwtSignAlgorithmNotSupported
+        }
         let base64EncodedcClaims = try jsonEncoder.encode(claims).base64URLEncodedString()
         let headerAndPayload = base64EncodedHeader + "." + base64EncodedcClaims
         guard let dataToSign = headerAndPayload.data(using: .utf8) else {

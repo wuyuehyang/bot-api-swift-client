@@ -53,6 +53,7 @@ public enum MixinError: Error {
     case keyPairGeneration(underlying: Error?)
     case parsePEMFile
     case createPrivateKeyWithPEM(underlying: Error)
+    case jwtSignAlgorithmNotSupported
     case jwtBuilding
     case jwtSign(underlying: Error)
     case invalidPinToken
