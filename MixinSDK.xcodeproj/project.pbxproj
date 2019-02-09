@@ -16,7 +16,7 @@
 		7BE75AB121F86B2F000CA2A1 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AB021F86B2F000CA2A1 /* Credential.swift */; };
 		7BE75AB521F871FC000CA2A1 /* String+SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AB421F871FC000CA2A1 /* String+SHA256.swift */; };
 		7BE75ABA21F88C33000CA2A1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AB921F88C33000CA2A1 /* Request.swift */; };
-		7BE75ABC21F8A19C000CA2A1 /* Data+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75ABB21F8A19C000CA2A1 /* Data+Base64.swift */; };
+		7BE75ABC21F8A19C000CA2A1 /* Data+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75ABB21F8A19C000CA2A1 /* Data+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		7BE75AB021F86B2F000CA2A1 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		7BE75AB421F871FC000CA2A1 /* String+SHA256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SHA256.swift"; sourceTree = "<group>"; };
 		7BE75AB921F88C33000CA2A1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		7BE75ABB21F8A19C000CA2A1 /* Data+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Base64.swift"; sourceTree = "<group>"; };
+		7BE75ABB21F8A19C000CA2A1 /* Data+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			children = (
 				7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */,
 				7BE75AB421F871FC000CA2A1 /* String+SHA256.swift */,
-				7BE75ABB21F8A19C000CA2A1 /* Data+Base64.swift */,
+				7BE75ABB21F8A19C000CA2A1 /* Data+Utils.swift */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 			files = (
 				7BC58B1921F842BA00E5CA4F /* Result.swift in Sources */,
 				7BE75AB521F871FC000CA2A1 /* String+SHA256.swift in Sources */,
-				7BE75ABC21F8A19C000CA2A1 /* Data+Base64.swift in Sources */,
+				7BE75ABC21F8A19C000CA2A1 /* Data+Utils.swift in Sources */,
 				7BE75AAB21F85BD3000CA2A1 /* JWT.swift in Sources */,
 				7BE75ABA21F88C33000CA2A1 /* Request.swift in Sources */,
 				7B7F8CAC21F816D200AAD11E /* MixinError.swift in Sources */,
