@@ -28,6 +28,13 @@
 			remoteGlobalIDString = 7BB930DD220F66F700ED8314;
 			remoteInfo = tommath;
 		};
+		7BD4D04F220F6AEE00C71DE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BD4D04B220F6AEE00C71DE4 /* tomcrypt.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7BD4D043220F6AC300C71DE4;
+			remoteInfo = tomcrypt;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,7 @@
 		7B7F8CAB21F816D200AAD11E /* MixinError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixinError.swift; sourceTree = "<group>"; };
 		7BC58B1821F842BA00E5CA4F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7BD4D032220F682700C71DE4 /* tommath.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tommath.xcodeproj; path = libtommath/tommath.xcodeproj; sourceTree = "<group>"; };
+		7BD4D04B220F6AEE00C71DE4 /* tomcrypt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tomcrypt.xcodeproj; path = libtomcrypt/tomcrypt.xcodeproj; sourceTree = "<group>"; };
 		7BE75AAA21F85BD3000CA2A1 /* JWT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
 		7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAKeyPair.swift; sourceTree = "<group>"; };
 		7BE75AB021F86B2F000CA2A1 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
@@ -111,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				7BD4D032220F682700C71DE4 /* tommath.xcodeproj */,
+				7BD4D04B220F6AEE00C71DE4 /* tomcrypt.xcodeproj */,
 				7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */,
 				7BE75AB421F871FC000CA2A1 /* String+SHA256.swift */,
 				7BE75ABB21F8A19C000CA2A1 /* Data+Utils.swift */,
@@ -131,6 +140,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BD4D04C220F6AEE00C71DE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BD4D050220F6AEE00C71DE4 /* libtomcrypt.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +211,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 7BD4D04C220F6AEE00C71DE4 /* Products */;
+					ProjectRef = 7BD4D04B220F6AEE00C71DE4 /* tomcrypt.xcodeproj */;
+				},
+				{
 					ProductGroup = 7BD4D033220F682700C71DE4 /* Products */;
 					ProjectRef = 7BD4D032220F682700C71DE4 /* tommath.xcodeproj */;
 				},
@@ -211,6 +232,13 @@
 			fileType = archive.ar;
 			path = libtommath.a;
 			remoteRef = 7BD4D036220F682700C71DE4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7BD4D050220F6AEE00C71DE4 /* libtomcrypt.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libtomcrypt.a;
+			remoteRef = 7BD4D04F220F6AEE00C71DE4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
