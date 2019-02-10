@@ -11,10 +11,10 @@
 		7B38C21121F709500068F47F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B38C21021F709500068F47F /* Network.swift */; };
 		7B7F8CAC21F816D200AAD11E /* MixinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7F8CAB21F816D200AAD11E /* MixinError.swift */; };
 		7BC58B1921F842BA00E5CA4F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC58B1821F842BA00E5CA4F /* Result.swift */; };
-		7BD4D039220F684C00C71DE4 /* libtommath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4D037220F682700C71DE4 /* libtommath.a */; };
 		7BD4D802220F6C5900C71DE4 /* MXNRsaOaepDecryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BD4D800220F6C5900C71DE4 /* MXNRsaOaepDecryptor.h */; };
 		7BD4D803220F6C5900C71DE4 /* MXNRsaOaepDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4D801220F6C5900C71DE4 /* MXNRsaOaepDecryptor.m */; };
-		7BD4D804220F6C8200C71DE4 /* libtomcrypt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4D050220F6AEE00C71DE4 /* libtomcrypt.a */; };
+		7BD4DAB92210165D00C71DE4 /* libtommath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4DAB22210161400C71DE4 /* libtommath.a */; };
+		7BD4DABA2210166100C71DE4 /* libtomcrypt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4DAB82210161900C71DE4 /* libtomcrypt.a */; };
 		7BE75AAB21F85BD3000CA2A1 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AAA21F85BD3000CA2A1 /* JWT.swift */; };
 		7BE75AAD21F86136000CA2A1 /* RSAKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */; };
 		7BE75AB121F86B2F000CA2A1 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AB021F86B2F000CA2A1 /* Credential.swift */; };
@@ -24,16 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7BD4D036220F682700C71DE4 /* PBXContainerItemProxy */ = {
+		7BD4DAB12210161400C71DE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7BD4D032220F682700C71DE4 /* tommath.xcodeproj */;
+			containerPortal = 7BD4DAAD2210161400C71DE4 /* tommath.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7BB930DD220F66F700ED8314;
 			remoteInfo = tommath;
 		};
-		7BD4D04F220F6AEE00C71DE4 /* PBXContainerItemProxy */ = {
+		7BD4DAB72210161900C71DE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7BD4D04B220F6AEE00C71DE4 /* tomcrypt.xcodeproj */;
+			containerPortal = 7BD4DAB32210161900C71DE4 /* tomcrypt.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7BD4D043220F6AC300C71DE4;
 			remoteInfo = tomcrypt;
@@ -47,10 +47,12 @@
 		7B38C21021F709500068F47F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		7B7F8CAB21F816D200AAD11E /* MixinError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixinError.swift; sourceTree = "<group>"; };
 		7BC58B1821F842BA00E5CA4F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		7BD4D032220F682700C71DE4 /* tommath.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tommath.xcodeproj; path = libtommath/tommath.xcodeproj; sourceTree = "<group>"; };
-		7BD4D04B220F6AEE00C71DE4 /* tomcrypt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tomcrypt.xcodeproj; path = libtomcrypt/tomcrypt.xcodeproj; sourceTree = "<group>"; };
 		7BD4D800220F6C5900C71DE4 /* MXNRsaOaepDecryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXNRsaOaepDecryptor.h; sourceTree = "<group>"; };
 		7BD4D801220F6C5900C71DE4 /* MXNRsaOaepDecryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXNRsaOaepDecryptor.m; sourceTree = "<group>"; };
+		7BD4DAA72210142300C71DE4 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		7BD4DAA82210146900C71DE4 /* libtommath.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libtommath.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD4DAAD2210161400C71DE4 /* tommath.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tommath.xcodeproj; path = libtommath/tommath.xcodeproj; sourceTree = "<group>"; };
+		7BD4DAB32210161900C71DE4 /* tomcrypt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tomcrypt.xcodeproj; path = libtomcrypt/tomcrypt.xcodeproj; sourceTree = "<group>"; };
 		7BE75AAA21F85BD3000CA2A1 /* JWT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
 		7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAKeyPair.swift; sourceTree = "<group>"; };
 		7BE75AB021F86B2F000CA2A1 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
@@ -64,8 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD4D039220F684C00C71DE4 /* libtommath.a in Frameworks */,
-				7BD4D804220F6C8200C71DE4 /* libtomcrypt.a in Frameworks */,
+				7BD4DAB92210165D00C71DE4 /* libtommath.a in Frameworks */,
+				7BD4DABA2210166100C71DE4 /* libtomcrypt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,10 +126,7 @@
 		7B38C21D21F73AEC0068F47F /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				7BD4D032220F682700C71DE4 /* tommath.xcodeproj */,
-				7BD4D04B220F6AEE00C71DE4 /* tomcrypt.xcodeproj */,
-				7BD4D800220F6C5900C71DE4 /* MXNRsaOaepDecryptor.h */,
-				7BD4D801220F6C5900C71DE4 /* MXNRsaOaepDecryptor.m */,
+				7BD4DA9F221013F700C71DE4 /* RSA-OAEP */,
 				7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */,
 				7BE75AB421F871FC000CA2A1 /* String+SHA256.swift */,
 				7BE75ABB21F8A19C000CA2A1 /* Data+Utils.swift */,
@@ -135,25 +134,38 @@
 			path = Crypto;
 			sourceTree = "<group>";
 		};
-		7BD4D033220F682700C71DE4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7BD4D037220F682700C71DE4 /* libtommath.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7BD4D038220F684C00C71DE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7BD4DAA82210146900C71DE4 /* libtommath.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7BD4D04C220F6AEE00C71DE4 /* Products */ = {
+		7BD4DA9F221013F700C71DE4 /* RSA-OAEP */ = {
 			isa = PBXGroup;
 			children = (
-				7BD4D050220F6AEE00C71DE4 /* libtomcrypt.a */,
+				7BD4DAAD2210161400C71DE4 /* tommath.xcodeproj */,
+				7BD4DAB32210161900C71DE4 /* tomcrypt.xcodeproj */,
+				7BD4DAA72210142300C71DE4 /* module.modulemap */,
+				7BD4D800220F6C5900C71DE4 /* MXNRsaOaepDecryptor.h */,
+				7BD4D801220F6C5900C71DE4 /* MXNRsaOaepDecryptor.m */,
+			);
+			path = "RSA-OAEP";
+			sourceTree = "<group>";
+		};
+		7BD4DAAE2210161400C71DE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BD4DAB22210161400C71DE4 /* libtommath.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BD4DAB42210161900C71DE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BD4DAB82210161900C71DE4 /* libtomcrypt.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,12 +232,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 7BD4D04C220F6AEE00C71DE4 /* Products */;
-					ProjectRef = 7BD4D04B220F6AEE00C71DE4 /* tomcrypt.xcodeproj */;
+					ProductGroup = 7BD4DAB42210161900C71DE4 /* Products */;
+					ProjectRef = 7BD4DAB32210161900C71DE4 /* tomcrypt.xcodeproj */;
 				},
 				{
-					ProductGroup = 7BD4D033220F682700C71DE4 /* Products */;
-					ProjectRef = 7BD4D032220F682700C71DE4 /* tommath.xcodeproj */;
+					ProductGroup = 7BD4DAAE2210161400C71DE4 /* Products */;
+					ProjectRef = 7BD4DAAD2210161400C71DE4 /* tommath.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -236,18 +248,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		7BD4D037220F682700C71DE4 /* libtommath.a */ = {
+		7BD4DAB22210161400C71DE4 /* libtommath.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libtommath.a;
-			remoteRef = 7BD4D036220F682700C71DE4 /* PBXContainerItemProxy */;
+			remoteRef = 7BD4DAB12210161400C71DE4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		7BD4D050220F6AEE00C71DE4 /* libtomcrypt.a */ = {
+		7BD4DAB82210161900C71DE4 /* libtomcrypt.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libtomcrypt.a;
-			remoteRef = 7BD4D04F220F6AEE00C71DE4 /* PBXContainerItemProxy */;
+			remoteRef = 7BD4DAB72210161900C71DE4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -416,7 +428,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/MixinSDK/Crypto/libtomcrypt/tomcrypt/headers";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/MixinSDK/Crypto/RSA-OAEP/libtomcrypt/tomcrypt/headers";
 				INFOPLIST_FILE = MixinSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -428,6 +440,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/MixinSDK/Crypto/RSA-OAEP";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,7 +459,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/MixinSDK/Crypto/libtomcrypt/tomcrypt/headers";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/MixinSDK/Crypto/RSA-OAEP/libtomcrypt/tomcrypt/headers";
 				INFOPLIST_FILE = MixinSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -458,6 +471,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/MixinSDK/Crypto/RSA-OAEP";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64";

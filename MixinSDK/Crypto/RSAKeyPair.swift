@@ -37,6 +37,7 @@ class RSAKeyPair {
             throw MixinError.keyPairGeneration(underlying: retained)
         }
         let publicKeyData = cfPublicKeyData as Data
+        
         return publicKeyData.dataByPrependingX509Header()
     }
     
