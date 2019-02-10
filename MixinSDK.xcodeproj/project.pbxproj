@@ -12,6 +12,9 @@
 		7B7F8CAC21F816D200AAD11E /* MixinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7F8CAB21F816D200AAD11E /* MixinError.swift */; };
 		7BC58B1921F842BA00E5CA4F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC58B1821F842BA00E5CA4F /* Result.swift */; };
 		7BD4D039220F684C00C71DE4 /* libtommath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4D037220F682700C71DE4 /* libtommath.a */; };
+		7BD4D802220F6C5900C71DE4 /* MXNRsaOaepDecryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BD4D800220F6C5900C71DE4 /* MXNRsaOaepDecryptor.h */; };
+		7BD4D803220F6C5900C71DE4 /* MXNRsaOaepDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD4D801220F6C5900C71DE4 /* MXNRsaOaepDecryptor.m */; };
+		7BD4D804220F6C8200C71DE4 /* libtomcrypt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4D050220F6AEE00C71DE4 /* libtomcrypt.a */; };
 		7BE75AAB21F85BD3000CA2A1 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AAA21F85BD3000CA2A1 /* JWT.swift */; };
 		7BE75AAD21F86136000CA2A1 /* RSAKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */; };
 		7BE75AB121F86B2F000CA2A1 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AB021F86B2F000CA2A1 /* Credential.swift */; };
@@ -46,6 +49,8 @@
 		7BC58B1821F842BA00E5CA4F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7BD4D032220F682700C71DE4 /* tommath.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tommath.xcodeproj; path = libtommath/tommath.xcodeproj; sourceTree = "<group>"; };
 		7BD4D04B220F6AEE00C71DE4 /* tomcrypt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tomcrypt.xcodeproj; path = libtomcrypt/tomcrypt.xcodeproj; sourceTree = "<group>"; };
+		7BD4D800220F6C5900C71DE4 /* MXNRsaOaepDecryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXNRsaOaepDecryptor.h; sourceTree = "<group>"; };
+		7BD4D801220F6C5900C71DE4 /* MXNRsaOaepDecryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXNRsaOaepDecryptor.m; sourceTree = "<group>"; };
 		7BE75AAA21F85BD3000CA2A1 /* JWT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
 		7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAKeyPair.swift; sourceTree = "<group>"; };
 		7BE75AB021F86B2F000CA2A1 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
@@ -60,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD4D039220F684C00C71DE4 /* libtommath.a in Frameworks */,
+				7BD4D804220F6C8200C71DE4 /* libtomcrypt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +126,8 @@
 			children = (
 				7BD4D032220F682700C71DE4 /* tommath.xcodeproj */,
 				7BD4D04B220F6AEE00C71DE4 /* tomcrypt.xcodeproj */,
+				7BD4D800220F6C5900C71DE4 /* MXNRsaOaepDecryptor.h */,
+				7BD4D801220F6C5900C71DE4 /* MXNRsaOaepDecryptor.m */,
 				7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */,
 				7BE75AB421F871FC000CA2A1 /* String+SHA256.swift */,
 				7BE75ABB21F8A19C000CA2A1 /* Data+Utils.swift */,
@@ -158,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B29047821F5D19B00556488 /* MixinSDK.h in Headers */,
+				7BD4D802220F6C5900C71DE4 /* MXNRsaOaepDecryptor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 			files = (
 				7BC58B1921F842BA00E5CA4F /* Result.swift in Sources */,
 				7BE75AB521F871FC000CA2A1 /* String+SHA256.swift in Sources */,
+				7BD4D803220F6C5900C71DE4 /* MXNRsaOaepDecryptor.m in Sources */,
 				7BE75ABC21F8A19C000CA2A1 /* Data+Utils.swift in Sources */,
 				7BE75AAB21F85BD3000CA2A1 /* JWT.swift in Sources */,
 				7BE75ABA21F88C33000CA2A1 /* Request.swift in Sources */,
@@ -406,6 +416,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/MixinSDK/Crypto/libtomcrypt/tomcrypt/headers";
 				INFOPLIST_FILE = MixinSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -435,6 +446,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/MixinSDK/Crypto/libtomcrypt/tomcrypt/headers";
 				INFOPLIST_FILE = MixinSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
