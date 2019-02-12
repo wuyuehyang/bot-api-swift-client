@@ -58,6 +58,13 @@ public enum MixinError: Error {
     case jwtSign(underlying: Error)
     case invalidPinToken
     case invalidPin
+    case invalidSessionId
+    case decryptePinToken(underlying: Error)
+    case generateSecuredRandom
+    case aesCryptorInit(code: Int32)
+    case aesCryptorUpdate(code: Int32)
+    case aesCryptorFinal(code: Int32)
+    case aesOutputBufferAllocation
 }
 
 extension MixinError: Decodable {

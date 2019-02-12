@@ -22,6 +22,7 @@
 		7BE75AB521F871FC000CA2A1 /* String+SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AB421F871FC000CA2A1 /* String+SHA256.swift */; };
 		7BE75ABA21F88C33000CA2A1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75AB921F88C33000CA2A1 /* Request.swift */; };
 		7BE75ABC21F8A19C000CA2A1 /* Data+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE75ABB21F8A19C000CA2A1 /* Data+Utils.swift */; };
+		7BF36D78221018F30068404D /* PinEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9F7AA21F981C8001F1AB2 /* PinEncryptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7BD4DAA82210146900C71DE4 /* libtommath.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libtommath.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD4DAAD2210161400C71DE4 /* tommath.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tommath.xcodeproj; path = libtommath/tommath.xcodeproj; sourceTree = "<group>"; };
 		7BD4DAB32210161900C71DE4 /* tomcrypt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = tomcrypt.xcodeproj; path = libtomcrypt/tomcrypt.xcodeproj; sourceTree = "<group>"; };
+		7BD9F7AA21F981C8001F1AB2 /* PinEncryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEncryptor.swift; sourceTree = "<group>"; };
 		7BE75AAA21F85BD3000CA2A1 /* JWT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
 		7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAKeyPair.swift; sourceTree = "<group>"; };
 		7BE75AB021F86B2F000CA2A1 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				7BD4DA9F221013F700C71DE4 /* RSA-OAEP */,
 				7BE75AAC21F86136000CA2A1 /* RSAKeyPair.swift */,
+				7BD9F7AA21F981C8001F1AB2 /* PinEncryptor.swift */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				7BE75AB521F871FC000CA2A1 /* String+SHA256.swift in Sources */,
 				7BD4D803220F6C5900C71DE4 /* MXNRsaOaepDecryptor.m in Sources */,
 				7BE75ABC21F8A19C000CA2A1 /* Data+Utils.swift in Sources */,
+				7BF36D78221018F30068404D /* PinEncryptor.swift in Sources */,
 				7BE75AAB21F85BD3000CA2A1 /* JWT.swift in Sources */,
 				7BE75ABA21F88C33000CA2A1 /* Request.swift in Sources */,
 				7B7F8CAC21F816D200AAD11E /* MixinError.swift in Sources */,
