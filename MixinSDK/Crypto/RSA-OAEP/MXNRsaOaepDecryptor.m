@@ -17,7 +17,7 @@ const NSErrorUserInfoKey MXNRsaOaepDecryptorUnderlyingErrorCode = @"MXNRsaOaepDe
 @interface MXNRsaOaepDecryptor ()
 
 @property (nonatomic, copy, readwrite) NSData *der;
-@property (nonatomic, assign, readwrite) size_t blockSize;
+@property (nonatomic, assign, readwrite) unsigned long blockSize;
 @property (nonatomic, assign, readwrite) rsa_key *key;
 
 @end
@@ -43,11 +43,13 @@ const NSErrorUserInfoKey MXNRsaOaepDecryptorUnderlyingErrorCode = @"MXNRsaOaepDe
                                  outError:(NSError * _Nullable *)error {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        crypt_mp_init("ltm"); // Use libtommath
         sha256HashIndex = register_hash(&sha256_desc);
     });
+    
     if (!_key) {
-        rsa_key key;
-        int result = rsa_import(_der.bytes, _der.length, &key);
+        _key = malloc(sizeof(rsa_key));
+        int result = rsa_import(_der.bytes, _der.length, _key);
         if (result != CRYPT_OK) {
             if (error) {
                 NSNumber *code = [NSNumber numberWithInt:result];
@@ -57,12 +59,11 @@ const NSErrorUserInfoKey MXNRsaOaepDecryptorUnderlyingErrorCode = @"MXNRsaOaepDe
             }
             return nil;
         }
-        _key = &key;
         _blockSize = rsa_get_size(_key);
     }
     
-    NSMutableData *plain = [NSMutableData new];
     unsigned long plainSize = _blockSize;
+    NSMutableData *plain = [NSMutableData dataWithLength:plainSize];
     int validation = CRYPT_OK;
     int result = rsa_decrypt_key_ex(cipher.bytes, cipher.length, plain.mutableBytes, &plainSize, label.bytes, label.length, sha256HashIndex, LTC_PKCS_1_OAEP, &validation, _key);
     
